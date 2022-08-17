@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.buct.coder.mapper.CfProblemsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.buct.coder.model.CfProblems">
+        <id column="id" property="id" />
+        <result column="contest_id" property="contestId" />
+        <result column="contest_name" property="contestName" />
+        <result column="index" property="index" />
+        <result column="problem_name" property="problemName" />
+        <result column="tag" property="tag" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, contest_id, contest_name, index, problem_name, tag, create_time, update_time
+    </sql>
+
+</mapper>

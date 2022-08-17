@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.buct.coder.mapper.DictionaryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.buct.coder.model.Dictionary">
+        <id column="id" property="id" />
+        <result column="dictionary_type" property="dictionaryType" />
+        <result column="dictionary_code" property="dictionaryCode" />
+        <result column="dictionary_name" property="dictionaryName" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, dictionary_type, dictionary_code, dictionary_name, create_time, update_time
+    </sql>
+
+</mapper>

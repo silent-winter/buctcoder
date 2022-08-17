@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.buct.coder.mapper.StudentContestLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.buct.coder.model.StudentContestLog">
+        <id column="id" property="id" />
+        <result column="contest_id" property="contestId" />
+        <result column="old_rank" property="oldRank" />
+        <result column="new_rank" property="newRank" />
+        <result column="diff" property="diff" />
+        <result column="solve" property="solve" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, contest_id, old_rank, new_rank, diff, solve, create_time, update_time
+    </sql>
+
+</mapper>
