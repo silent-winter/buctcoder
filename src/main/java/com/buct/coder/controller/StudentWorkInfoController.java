@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 学生比赛记录 前端控制器
+ * 学生做题统计表 前端控制器
  * </p>
  *
  * @author xinzi
- * @since 2022-08-17
+ * @since 2022-08-18
  */
 @RestController
-@RequestMapping("/contest-log")
-public class StudentContestLogController {
+@RequestMapping("/work")
+public class StudentWorkInfoController {
 
 
 

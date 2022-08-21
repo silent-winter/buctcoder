@@ -12,11 +12,12 @@
         <result column="language" property="language" />
         <result column="status" property="status" />
         <result column="code" property="code" />
+        <result column="contest_id" property="contestId" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, stu_id, submit_id, submit_time, question_name, language, status, code
+        id, stu_id, submit_id, submit_time, question_name, language, status, code, contest_id
     </sql>
 
 </mapper>

@@ -90,5 +90,10 @@ public class Student implements Serializable {
     @TableField("update_time")
     private Date updateTime;
 
-
+    @TableField("cf_id")
+    private String cfId;
+    @TableField("ac_id")
+    private String acId;
+    @TableField("nc_id")
+    private String ncId;
 }

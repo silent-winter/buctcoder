@@ -16,11 +16,14 @@
         <result column="nc_rating" property="ncRating" />
         <result column="create_time" property="createTime" />
         <result column="update_time" property="updateTime" />
+        <result column="cf_id" property="cfId" />
+        <result column="ac_id" property="acId" />
+        <result column="nc_id" property="ncId" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, stu_no, name, class_name, sex, school, year, cf_rating, ac_rating, nc_rating, create_time, update_time
+        id, stu_no, name, class_name, sex, school, year, cf_rating, ac_rating, nc_rating, create_time, update_time, cf_id, ac_id, nc_id
     </sql>
 
 </mapper>

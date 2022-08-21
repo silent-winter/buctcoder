@@ -6,6 +6,9 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.Set;
+
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -19,7 +22,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("contest")
+@TableName(value = "contest", autoResultMap = true)
 public class Contest implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -60,14 +63,13 @@ public class Contest implements Serializable {
     /**
      * 参赛学生信息
      */
-    @TableField("stu_ids")
-    private String stuIds;
+    @TableField(value = "stu_ids", typeHandler = JacksonTypeHandler.class)
+    private Set<Integer> stuIds;
 
     @TableField("create_time")
     private Date createTime;
 
     @TableField("update_time")
     private Date updateTime;
-
 
 }

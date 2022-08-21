@@ -69,5 +69,11 @@ public class StudentSubmitLog implements Serializable {
     @TableField("code")
     private String code;
 
+    /**
+     * 比赛id
+     */
+    @TableField("contest_id")
+    private Long contestId;
+
 
 }

@@ -1,10 +1,9 @@
 package com.buct.coder.controller;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.buct.coder.facade.request.StudentPageRequest;
 import com.buct.coder.facade.response.ApiResult;
-import com.buct.coder.facade.response.PageResult;
-import com.buct.coder.facade.response.vo.StudentVO;
 import com.buct.coder.model.Student;
 import com.buct.coder.service.IStudentService;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +28,7 @@ public class StudentController {
 
 
     @PostMapping("/list")
-    public ApiResult<PageResult<Student>> findStudents(@RequestBody StudentPageRequest studentPageRequest) {
+    public ApiResult<Page<Student>> findStudents(@RequestBody StudentPageRequest studentPageRequest) {
         return ApiResult.success(studentService.queryPage(studentPageRequest));
     }
 

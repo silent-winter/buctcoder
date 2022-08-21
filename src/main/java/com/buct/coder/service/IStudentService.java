@@ -1,7 +1,7 @@
 package com.buct.coder.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.buct.coder.facade.request.StudentPageRequest;
-import com.buct.coder.facade.response.PageResult;
 import com.buct.coder.model.Student;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -15,6 +15,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IStudentService extends IService<Student> {
 
-    PageResult<Student> queryPage(StudentPageRequest studentPageRequest);
+    Page<Student> queryPage(StudentPageRequest studentPageRequest);
 
 }

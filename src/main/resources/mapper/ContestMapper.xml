@@ -10,7 +10,7 @@
         <result column="link" property="link" />
         <result column="source" property="source" />
         <result column="stu_count" property="stuCount" />
-        <result column="stu_ids" property="stuIds" />
+        <result column="stu_ids" property="stuIds" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
         <result column="create_time" property="createTime" />
         <result column="update_time" property="updateTime" />
     </resultMap>
