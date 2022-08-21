@@ -9,6 +9,7 @@ import com.buct.coder.model.Student;
 import com.buct.coder.service.IStudentService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -33,6 +34,7 @@ public class CfDataSpider {
 
 
     @Scheduled(cron ="0/30 * * * * ?")
+    @Async
     public void refreshData() {
         List<Student> students = studentService.list();
         for (Student student : students) {
